@@ -1,0 +1,63 @@
+\name{gibbs1}
+\alias{gibbs1}
+\title{This is the title string for gibbs1}
+\description{
+  This is the description string for gibbs1.
+}
+\usage{
+gibbs1(data, prior, nrep, control = c(10, 1, 3), seed = NULL,
+eps = 0.01, adtim = NULL, domcse = T, ci = 0, nbatch = 20, new = T,
+npass.ci = 3, nrep.ci = NULL, tol = 0, reuse = F)
+}
+\arguments{
+  \item{data}{is a matrix containing the data intervals.  The matrix has
+two columns.  Each row of the matrix gives one data interval.  The time
+value infinity may be coded as NA, Inf, or -99.}
+
+  \item{prior}{is a vector specifying the prior distribution.  It
+contains three values a, b, totm0.  The values a, b specify the gamma
+mixing distribution.  The value totm0 is the total mass alpha(R) of the
+Dirichlet measure.}
+
+  \item{nrep}{is the number of iterations of the Gibbs sampler to
+record.}
+
+  \item{control}{is a vector of three values (go, g1, gextra) which
+control the running of the Gibbs sampler.  \code{g0} is the warm-up or
+burn-in period.  The first g0-1 iterations of the "complete" Gibbs
+sampler are discarded.  \code{g1} s the spacing.  Every g1 iterations of
+the "complete" Gibbs sampler, we record various statistics (keep running
+totals).  \code{gextra} controls the spacing of the "extra step" which
+randomizes the position of the atoms.  The extra step is inserted every
+gextra sweeps of the "basic" Gibbs sampler.  The gextra sweeps of the
+"basic" Gibbs sampler plus the extra step make up one iteration of the
+"complete" Gibbs sampler.}
+
+  \item{seed}{is a vector of three integer seeds for the random number
+generators.  The first seed should be between 1 and 32.}
+
+  \item{eps}{is a small positive value.  The program currently does not
+handle exact observed death times t, but replaces these by interval
+censored observations (t-eps,t).}
+
+  \item{adtim}{is a vector of additional time points at which the
+survival function is to be computed.  If this is not specified, then the
+survival function is only computed at the endpoints of the data
+intervals.}
+
+  \item{domcse}{Needs documentation.}
+
+  \item{ci}{Needs documentation.}
+
+  \item{nbatch}{Needs documentation.}
+
+  \item{new}{Needs documentation.}
+
+  \item{npass.ci}{Needs documentation.}
+
+  \item{nrep.ci}{Needs documentation.}
+
+  \item{tol}{Needs documentation.}
+
+  \item{reuse}{Needs documentation.}
+}

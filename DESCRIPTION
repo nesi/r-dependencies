@@ -1,0 +1,9 @@
+Package: dependencies
+Title: dependencies: make sure dependencies are installed when running a script
+Version: 0.1
+Date: 2012-11-09
+Author: Markus Binsteiner
+Description: A function to install a package if not installed already
+Maintainer: Markus Binsteiner <m.binsteiner@auckland.ac.nz>
+Dependencies: 
+License: GPL2.0
