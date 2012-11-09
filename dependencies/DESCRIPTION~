@@ -1,0 +1,9 @@
+Package: npbayes
+Title: npbayes: Nonparametric Bayesian Analysis using the Gibbs sampler
+Version: 0.1
+Date: 2008-08-11
+Author: Hani J. Doss, Fred W. Huffer
+Description: Some functions for nonparametric bayesian analysis of survival data
+Maintainer: Hani J. Doss <doss@stat.ufl.edu>
+Dependencies: 
+License: GPL2.0

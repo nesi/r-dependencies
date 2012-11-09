@@ -1,0 +1,11 @@
+"required"<-
+function(dependency)
+{
+    # install package
+    if(dependency %in% rownames(installed.packages()) == FALSE) {
+               install.packages(dependency, lib=userdir)
+        } else {
+               print(paste("Package already installed: ", dependency))
+        }
+
+}
