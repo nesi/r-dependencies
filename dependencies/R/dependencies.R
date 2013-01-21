@@ -14,6 +14,7 @@ function(dependency)
     # install package
     if(dependency %in% rownames(installed.packages()) == FALSE) {
                install.packages(dependency, lib=userdir, repos=nz_repo, dependencies = TRUE)
+	       library(dependency, lib.loc=userdir, character.only = TRUE)
         } else {
                print(paste("Package already installed: ", dependency))
         }
